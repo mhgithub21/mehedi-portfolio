@@ -1,71 +1,226 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICT Learning Center</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT Learning Center | Mehedi Hasan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #071827;
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+header {
+    background: #102b43;
+    padding: 20px 12px;
+    text-align: center;
+    border-bottom: 2px solid #00d9ff;
+}
+
+header h1 {
+    color: #00d9ff;
+}
+
+header p {
+    color: #c9ddeb;
+}
+
+nav {
+    background: #0b2135;
+    padding: 13px;
+    text-align: center;
+}
+
+nav a {
+    color: #00d9ff;
+    text-decoration: none;
+    margin: 5px 12px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 15px;
+    background: linear-gradient(135deg, #123b59, #071827);
+}
+
+.hero h2 {
+    color: #00d9ff;
+    font-size: 27px;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #c9ddeb;
+}
+
+.container {
+    max-width: 1000px;
+    width: 94%;
+    margin: 30px auto;
+}
+
+.section-title {
+    color: #00d9ff;
+    margin: 30px 0 15px;
+    border-left: 4px solid #00d9ff;
+    padding-left: 12px;
+}
+
+.class-card {
+    background: #122a40;
+    border: 1px solid #24506d;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 18px 0;
+}
+
+.class-card h3 {
+    color: #00d9ff;
+    margin-bottom: 12px;
+}
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    gap: 10px;
+}
+
+.chapter-grid a {
+    background: #203d57;
+    border: 1px solid #32617e;
+    border-radius: 8px;
+    color: #eaf4ff;
+    text-decoration: none;
+    padding: 12px 8px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.chapter-grid a:hover {
+    background: #00bcd4;
+    color: #071827;
+}
+
+.note {
+    background: #142b42;
+    border-left: 4px solid #00d9ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+footer {
+    background: #102b43;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+    color: #c9ddeb;
+}
+
+footer a {
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+@media(max-width: 600px) {
+    .hero h2 {
+        font-size: 22px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <nav class="navbar">
-        <h2 class="logo">ICT<span> LEARNING</span></h2>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#classes">Classes</a>
-        </div>
-    </nav>
+    <h1>ICT LEARNING CENTER</h1>
+    <p>Learn ICT Easily | Mehedi Hasan</p>
 </header>
 
+<nav>
+    <a href="index.html">Home</a>
+    <a href="ict.html">ICT Learning</a>
+</nav>
+
 <section class="hero">
-    <div class="hero-content">
-        <p class="welcome">EDUCATIONAL PLATFORM</p>
-        <h1>ICT Learning Center</h1>
-        <h2>Learn ICT Easily</h2>
-        <p class="description">
-            Educational notes, lessons,
-            questions and answers for students.
-        </p>
-    </div>
+    <h2>ICT Learning Center</h2>
+    <p>Class 6, Class 7, Class 8, SSC ও HSC-এর ICT অধ্যায়ভিত্তিক শিক্ষা</p>
 </section>
 
-<section class="section" id="classes">
-    <h2>Select Your <span>Class</span></h2>
+<main class="container">
 
-    <div class="cards">
-        <a href="Classes/Class-6.html" class="class-card">
-            <h3>Class 6</h3>
-            <p>ICT Learning</p>
-        </a>
+    <h2 class="section-title">আমাদের ICT ক্লাসসমূহ</h2>
 
-        <a href="classes/class-7.html" class="class-card">
-            <h3>Class 7</h3>
-            <p>ICT Learning</p>
-        </a>
-
-        <a href="classes/class-8.html" class="class-card">
-            <h3>Class 8</h3>
-            <p>ICT Learning</p>
-        </a>
-
-        <a href="classes/ssc.html" class="class-card">
-            <h3>SSC</h3>
-            <p>ICT Learning</p>
-        </a>
-
-        <a href="classes/hsc.html" class="class-card">
-            <h3>HSC</h3>
-            <p>ICT Learning</p>
-        </a>
+    <div class="note">
+        আপনার শ্রেণি নির্বাচন করুন। এরপর পছন্দের অধ্যায়ে ক্লিক করে
+        পাঠ, প্রশ্নোত্তর ও MCQ অনুশীলন করতে পারবেন।
     </div>
-</section>
+
+    <div id="classes-container"></div>
+
+</main>
 
 <footer>
-    <p>© 2026 Mehedi Hasan | ICT Learning Center</p>
-    <a href="index.html">Back to Portfolio</a>
+    <h3>MEHEDI HASAN</h3>
+    <p>ICT Learning Center</p>
+    <p><a href="index.html">Back to Home</a></p>
+    <p>© 2026 Mehedi Hasan. All Rights Reserved.</p>
 </footer>
+
+<script>
+const classes = [
+    { name: "Class 6", id: "6", count: 5 },
+    { name: "Class 7", id: "7", count: 5 },
+    { name: "Class 8", id: "8", count: 5 },
+    { name: "SSC", id: "SSC", count: 6 },
+    { name: "HSC", id: "HSC", count: 6 }
+];
+
+const container = document.getElementById("classes-container");
+
+classes.forEach(item => {
+
+    let links = "";
+
+    for (let i = 1; i <= item.count; i++) {
+
+        let url;
+
+        // Class 6-এর প্রথম অধ্যায় আগের তৈরি পেজেই থাকবে
+        if (item.id === "6" && i === 1) {
+            url = "Classes/Class-6.html";
+        } else {
+            url = "Classes/chapter.html?class=" +
+                  item.id + "&chapter=" + i;
+        }
+
+        links += `
+            <a href="${url}">
+                অধ্যায় ${i}
+            </a>
+        `;
+    }
+
+    container.innerHTML += `
+        <section class="class-card">
+            <h3>${item.name}</h3>
+            <div class="chapter-grid">
+                ${links}
+            </div>
+        </section>
+    `;
+});
+</script>
 
 </body>
 </html>
