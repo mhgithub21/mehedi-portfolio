@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT Chapter | Mehedi Hasan</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #071827;
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    background: #102b43;
+    text-align: center;
+    padding: 20px 12px;
+    border-bottom: 2px solid #00d9ff;
+}
+
+header h1 {
+    color: #00d9ff;
+}
+
+nav {
+    background: #0b2135;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: #00d9ff;
+    text-decoration: none;
+    margin: 5px 10px;
+}
+
+.container {
+    max-width: 900px;
+    width: 94%;
+    margin: 25px auto;
+}
+
+.hero {
+    background: #122a40;
+    padding: 22px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    border: 1px solid #24506d;
+}
+
+.hero h2 {
+    color: #00d9ff;
+}
+
+.hero p {
+    color: #c9ddeb;
+}
+
+.section-title {
+    color: #00d9ff;
+    margin: 25px 0 12px;
+    border-left: 4px solid #00d9ff;
+    padding-left: 12px;
+}
+
+.content-box {
+    background: #142b42;
+    border: 1px solid #24506d;
+    border-radius: 10px;
+    padding: 18px;
+    margin: 12px 0;
+}
+
+.content-box h3 {
+    color: #42d9ff;
+    margin-bottom: 8px;
+}
+
+.content-box p {
+    margin-bottom: 8px;
+}
+
+.notice {
+    background: #18344b;
+    border-left: 4px solid #00d9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 18px 0;
+}
+
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.chapter-navigation a {
+    background: #00bcd4;
+    color: #071827;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.chapter-navigation a:hover {
+    background: #42d9ff;
+}
+
+footer {
+    background: #102b43;
+    text-align: center;
+    padding: 22px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00d9ff;
+    text-decoration: none;
+}
+
+@media(max-width: 600px) {
+    .chapter-navigation a {
+        flex: 1;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ICT LEARNING CENTER</h1>
+    <p>Mehedi Hasan</p>
+</header>
+
+<nav>
+    <a href="../index.html">Home</a>
+    <a href="../ict.html">All Classes</a>
+</nav>
+
+<main class="container">
+
+    <section class="hero">
+        <h2 id="page-title">ICT Chapter</h2>
+        <p id="chapter-subtitle">অধ্যায়ের পাঠ ও অনুশীলন</p>
+    </section>
+
+    <div class="notice">
+        এই অধ্যায়ের পাঠ, নোট, প্রশ্নোত্তর ও MCQ এখানে যুক্ত করা হবে।
+    </div>
+
+    <section id="chapter-content"></section>
+
+    <div class="chapter-navigation">
+        <a id="previous-link" href="#">← আগের অধ্যায়</a>
+        <a href="../ict.html">সব অধ্যায়</a>
+        <a id="next-link" href="#">পরের অধ্যায় →</a>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Mehedi Hasan | ICT Learning Center</p>
+    <p><a href="../ict.html">Back to ICT Center</a></p>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const classId = params.get("class");
+const chapter = Number(params.get("chapter"));
+
+const classNames = {
+    "6": "Class 6",
+    "7": "Class 7",
+    "8": "Class 8",
+    "SSC": "SSC",
+    "HSC": "HSC"
+};
+
+const chapterCounts = {
+    "6": 5,
+    "7": 5,
+    "8": 5,
+    "SSC": 6,
+    "HSC": 6
+};
+
+/*
+  ভবিষ্যতে প্রতিটি অধ্যায়ের লেখা এখানে যোগ করবেন।
+
+  উদাহরণ:
+  "6-2": `
+      <h3 class="section-title">পাঠ ১: অধ্যায়ের বিষয়</h3>
+      <div class="content-box">
+          <h3>বিষয়ের নাম</h3>
+          <p>এখানে অধ্যায়ের লেখা লিখবেন।</p>
+      </div>
+  `,
+
+  "7-1" = Class 7, Chapter 1
+  "SSC-2" = SSC, Chapter 2
+  "HSC-3" = HSC, Chapter 3
+*/
+
+const chapterContent = {
+
+    "6-2": `
+        <h3 class="section-title">দ্বিতীয় অধ্যায়ের পাঠ</h3>
+
+        <div class="content-box">
+            <h3>অধ্যায়ের লেখা যুক্ত করুন</h3>
+            <p>
+                এখানে ষষ্ঠ শ্রেণির দ্বিতীয় অধ্যায়ের
+                পাঠ ও প্রয়োজনীয় নোট যুক্ত করবেন।
+            </p>
+        </div>
+
+        <h3 class="section-title">প্রশ্ন ও উত্তর</h3>
+
+        <div class="content-box">
+            <h3>প্রশ্ন ১: এখানে প্রশ্ন লিখুন</h3>
+            <p>উত্তর: এখানে প্রশ্নের উত্তর লিখুন।</p>
+        </div>
+
+        <h3 class="section-title">MCQ অনুশীলন</h3>
+
+        <div class="content-box">
+            <p>এই অধ্যায়ের MCQ প্রশ্ন পরবর্তীতে যুক্ত করা হবে।</p>
+        </div>
+    `
+
+};
+
+const pageTitle = document.getElementById("page-title");
+const subtitle = document.getElementById("chapter-subtitle");
+const content = document.getElementById("chapter-content");
+
+const validClass = Object.prototype.hasOwnProperty.call(
+    classNames, classId
+);
+
+const validChapter = Number.isInteger(chapter) &&
+    chapter >= 1 &&
+    chapter <= (chapterCounts[classId] || 0);
+
+if (!validClass || !validChapter) {
+
+    pageTitle.textContent = "অধ্যায় পাওয়া যায়নি";
+    subtitle.textContent = "অনুগ্রহ করে সঠিক অধ্যায় নির্বাচন করুন।";
+
+    content.innerHTML = `
+        <div class="content-box">
+            <p>আপনার নির্বাচিত অধ্যায়টি সঠিক নয়।</p>
+            <p><a href="../ict.html">ICT Learning Center-এ ফিরে যান</a></p>
+        </div>
+    `;
+
+    document.querySelector(".chapter-navigation").style.display = "none";
+
+} else {
+
+    const currentClass = classNames[classId];
+
+    pageTitle.textContent =
+        currentClass + " - অধ্যায় " + chapter;
+
+    subtitle.textContent =
+        "তথ্য ও যোগাযোগ প্রযুক্তি | অধ্যায় " + chapter;
+
+    const key = classId + "-" + chapter;
+
+    if (chapterContent[key]) {
+        content.innerHTML = chapterContent[key];
+    } else {
+        content.innerHTML = `
+            <div class="content-box">
+                <h3>এই অধ্যায়ের লেখা এখনো যুক্ত করা হয়নি।</h3>
+                <p>
+                    শিগগিরই এই অধ্যায়ের পাঠ, সংক্ষিপ্ত প্রশ্ন,
+                    বর্ণনামূলক প্রশ্ন এবং MCQ যুক্ত করা হবে।
+                </p>
+            </div>
+        `;
+    }
+
+    function chapterUrl(number) {
+
+        // Class 6-এর প্রথম অধ্যায় আগের ফাইলেই আছে
+        if (classId === "6" && number === 1) {
+            return "Class-6.html";
+        }
+
+        return "chapter.html?class=" +
+            classId + "&chapter=" + number;
+    }
+
+    const previous = document.getElementById("previous-link");
+    const next = document.getElementById("next-link");
+
+    if (chapter > 1) {
+        previous.href = chapterUrl(chapter - 1);
+    } else {
+        previous.style.display = "none";
+    }
+
+    if (chapter < chapterCounts[classId]) {
+        next.href = chapterUrl(chapter + 1);
+    } else {
+        next.style.display = "none";
+    }
+
+    document.title =
+        currentClass + " Chapter " + chapter +
+        " | Mehedi Hasan";
+}
+</script>
+
+</body>
+</html>
